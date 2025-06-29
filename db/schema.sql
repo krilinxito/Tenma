@@ -161,3 +161,13 @@ CREATE TABLE examen_resultado (
     FOREIGN KEY (id_examen_solicitado) REFERENCES examen_solicitado(id_examen_solicitado),
     FOREIGN KEY (id_documento_asociado) REFERENCES documento(id_documento)
 );
+-- Tabla: user_logs (Registro de actividad de usuarios como logins y logouts)
+CREATE TABLE user_logs (
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,               -- El ID del usuario que realizó la acción
+    tipo_evento ENUM('login', 'logout') NOT NULL, -- Tipo de evento registrado
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Momento en que ocurrió el evento
+    ip_address VARCHAR(45),                -- Dirección IP desde donde se realizó la acción
+    user_agent TEXT,                       -- Información del navegador/dispositivo del usuario
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+);
