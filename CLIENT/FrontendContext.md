@@ -69,6 +69,8 @@ Este modal se superpone a la `Página de Pacientes` y ofrece una vista completa 
 * **Sección de Medicamentos Recetados:**
     * Muestra una lista de todos los **medicamentos recetados** al paciente, incluyendo dosis, frecuencia, duración y el doctor que lo recetó.
     * **Botón "Añadir Medicamento":** Permite añadir nuevas recetas al paciente.
+* **Sección de Editar el rol de IA:**
+    * Permite aniadir un rol custom para el chat embebido de ese unico paciente
 * **Sección de Exámenes Recientes:**
     * Muestra una lista de los **últimos resultados de exámenes** del paciente, incluyendo valores, rangos de referencia e interpretación médica.
     * **Botón "Añadir Examen":** Permite registrar nuevos resultados de exámenes.
